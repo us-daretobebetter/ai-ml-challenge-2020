@@ -4,7 +4,9 @@
 
 ## Registering for the Challenge
 The first task is to register your team for the challenge. To do that, follow the instructions on the [challenge website](https://www.challenge.gov/challenge/GSA-artificial-intelligence-AI-machine-learning-ML-challenge/).
- 
+
+## Example EULA Documents
+EULA documents are typically received as Microsoft Word or PDF documents. Examples of these are available in the [Reference](reference/readme.md) section.
 
 ## Training Data For The Challenge
 We are providing the initial set of training data thas been extracted from actual EULA documents and had identifying information, such as company name, removed. We may provide updates to the training data during the challenge, and list them in the table below. 
