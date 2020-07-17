@@ -21,9 +21,8 @@ Below are the instructions for your Github submission. Everything must be submit
 * Name of the file: “TeamName Validation Data File”
 * Includes classification of clauses contained in Validation File, along with confidence scores.
   * Clause ID
-  * Clause Text
   * Prediction: 0 - acceptable, 1 - unacceptable
-  * Prediction Probability - percent 
+  * Probability Acceptable (percent) 
  
 2. **Description of Methods Document (PDF, MS Word, or Jupyter Notebook document)** <br/>
 *IMPORTANT: DO NOT INCLUDE ANY SENSITIVE INFORMATION IN THIS FILE.*
