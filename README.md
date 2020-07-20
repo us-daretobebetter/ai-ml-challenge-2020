@@ -31,7 +31,7 @@ When you submit your solution, one of the required items is a validation data se
 Format of validation data:
 
 | Clause ID                                                                  | Clause Text                                              | 
-| -------------------------------------------------------------------------- | -------------------------------------------------------- | -------------- | 
+| -------------------------------------------------------------------------- | -------------------------------------------------------- |
 | Integer generated for tracking individual clauses. | Section or paragraph of a EULA document that has been reviewed for acceptability to GSA. |
 
 
