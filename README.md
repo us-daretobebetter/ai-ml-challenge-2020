@@ -22,7 +22,7 @@ Format of training data:
 | Integer generated for tracking individual clauses. | Section or paragraph of a EULA document that has been reviewed for acceptability to GSA. | Indication if this clause is acceptable (0) or unacceptable (1) to GSA. **This is the indicator we are asking teams to help us predict**  |
 
 ## Validation Data For The Challenge
-When you submit your solution, one of the required items is a validation data set. This is the input for that delivrable. See below for more details.
+When you submit your solution, one of the required items is a validation data set. This is the input for that deliverable. See below for more details.
 
 | Data set                                                                   | Description                                              | Date published |
 | -------------------------------------------------------------------------- | -------------------------------------------------------- | -------------- | 
