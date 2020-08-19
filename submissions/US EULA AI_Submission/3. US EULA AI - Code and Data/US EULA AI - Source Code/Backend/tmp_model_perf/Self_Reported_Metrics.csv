@@ -1,0 +1,2 @@
+,brier_score,f_score,recall,precision,accuracy,true_positive,true_negative,false_positive,false_negative,best_params
+Random Forest,0.110241966842827,0.5433070866141733,0.4928571428571429,0.6052631578947368,0.8531645569620253,69,605,45,71,"{'criterion': 'gini', 'max_features': 'auto', 'n_estimators': 1000, 'max_depth': 2000}"

@@ -1,0 +1,27 @@
+<div class="main-container" @fadeAnimation>
+  <div class="col-6 upload-section">
+    <div class="title">Upload File</div>
+    <div class="sub-title">
+      Add your End Users License Agreement. Support .pdf or .docx
+    </div>
+    
+    <ngb-alert type="danger" *ngIf="typeError" [dismissible]="false">Please make sure upload only <code>.docx, .pdf</code> file(s). </ngb-alert>
+    <span class="btn btn-outline-primary btn-file">
+      Select File
+      <input type="file" (change)="onFileChange($event.target.files)" accept=".pdf,.docx" multiple />
+    </span>
+    
+
+    <div class="file-name-label row">
+      <span #labelImport></span>
+      <span class="btn-upload" *ngIf="fileToUpload.length > 0 && !loading" (click)="confirm()">
+        <i class="material-icons upload-icon" placement="bottom" ngbTooltip="Click to upload file(s)"
+          (click)="confirm()">cloud_upload</i>
+
+      </span>
+      <mat-progress-spinner *ngIf="loading" class="progress-spinner" color="primary" mode="indeterminate" [diameter]="50">
+      </mat-progress-spinner>
+    </div>
+  </div>
+  <div class="col-6"></div>
+</div>

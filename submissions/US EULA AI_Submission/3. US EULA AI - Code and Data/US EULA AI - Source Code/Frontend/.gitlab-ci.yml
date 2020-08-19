@@ -1,0 +1,11 @@
+variables:
+  CLI_VERSION:   8.1.0
+  GIT_SUBMODULE_STRATEGY: recursive
+  #BASE_HREF: landing
+include:
+  - project: 'EULA/tools'
+    file: '/Angular-CI-Build.yaml'
+  - project: 'EULA/tools'
+    file: '/Angular-Append-Tag.yaml'
+  - project: 'EULA/tools'
+    file: '/Angular-Deploy.yaml'

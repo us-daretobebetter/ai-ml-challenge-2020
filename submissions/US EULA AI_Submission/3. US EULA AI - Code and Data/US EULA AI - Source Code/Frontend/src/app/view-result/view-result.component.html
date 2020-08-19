@@ -1,0 +1,128 @@
+<div class="view-result-container">
+  <div class="row tool-bar">
+    <div class="back-btn-container col-2">
+      <button type="button" class="btn back-btn" (click)="back()">
+        <i class="material-icons-round">keyboard_arrow_left</i>
+        Back
+      </button>
+    </div>
+    <div class="options-btn-container col-10">
+      <div class="options-btn-group float-right">
+        <div class="train-btn">
+          <i class="material-icons" placement="bottom" ngbTooltip="Include this file in the training dataset and retrain the model."
+            (click)="retrain()">cached</i>
+        </div>
+        <div class="analytics-btn">
+            <i class="material-icons material-icons-outlined" placement="bottom" ngbTooltip="View insights of this document" (click)="openAnalyticsModal(insights)">insights</i>
+          </div>
+        <div class="print-btn">
+          <i class="material-icons" placement="bottom" ngbTooltip="Print the page" (click)="print()">print</i>
+        </div>
+        <div class="help-btn">
+          <i class="material-icons" placement="bottom" ngbTooltip="Help" (click)="openHelpModal(help)">help_outline</i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="body-container row">
+    <div class="doc-list-container col-2">
+      <div class="list-header">Documents</div>
+      <div class="doc-list" *ngFor="let doc of docsList">
+        <div class="doc-name" [ngClass]="{'active': selectedDoc === doc}" (click)="docNavigate(doc)">
+          <i class="material-icons-outlined doc-icon">text_snippet</i>
+          {{doc.docName}}</div>
+      </div>
+    </div>
+    <div class="clauses-container col-10" [@listAnimation]="clauses.length" id="clausesContainer">
+      <div class="clause row" *ngFor="let e of clauses" [ngClass]="{
+          'not-accept': !renderPredictionSign(e), 'active': activeClause === e, 'not-clause': !isClause(e)
+        }">
+        <div class="text col-10">
+            {{ e.Full_Clause }}
+          </div>
+        <div class="prediction col-2" *ngIf="!isClause(e)">Not a clause</div>
+        <div class="prediction col-2" (click)="openEditModal(modify); activeClause = e;" *ngIf="isClause(e)">
+          <div class="acceptance">
+            Acceptance:
+            <mat-icon *ngIf="!renderPredictionSign(e)" aria-hidden="false" aria-label="Unacceptable">clear
+            </mat-icon>
+            <mat-icon *ngIf="renderPredictionSign(e)" aria-hidden="false" aria-label="Acceptable">
+              done</mat-icon>
+          </div>
+          <div class="confidence" *ngIf="e.Modified_Label">
+            Manually Corrected
+          </div>
+          <div class="confidence" *ngIf="!e.Modified_Label">
+            Confidence Score: {{ e.Prediction_Confidence_Score | number: "1.0-2" }}
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<ng-template #modify let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Modify the Result</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body edit-prediction">
+    <div class="custom-control custom-radio">
+      <input type="radio" id="acceptable" name="resultRadio" class="custom-control-input" [checked]="isAcceptable()"
+        (click)="toggleModifiedLabel('0.0')">
+      <label class="custom-control-label" for="acceptable">Acceptable</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="unacceptable" name="resultRadio" class="custom-control-input" [checked]="!isAcceptable()"
+        (click)="toggleModifiedLabel('1.0')">
+      <label class="custom-control-label" for="unacceptable">Unacceptable</label>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+  </div>
+</ng-template>
+
+<ng-template #help let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Help</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <ul>
+      <li>Click on <code>prediction section</code> next to the clause to modify the result.</li>
+      <li><code>Confidence Score</code> is the prediction probability of each clause.</li>
+      <li>To help improve the model, click the <code>retrain</code> button if you find the predictions on the current document are accurate (include modifications you made), 
+        the model will take in this document and it's predictions in training dataset and retrain itself.</li>
+    </ul>
+  </div>
+</ng-template>
+
+<ng-template #insights let-modal modal-lg>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Insights</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div *ngIf="!selectedDoc">Please upload a document first</div>
+      <h6>{{selectedDoc ? selectedDoc.docName : ''}}</h6>
+      <ul *ngIf="selectedDoc">
+        <li>Number of clauses detected: <code><b>{{insightsStat.NumClauses}}</b></code></li>
+        <li>Number of non-clauses detected: <code><b>{{insightsStat.NumNonClauses}}</b></code></li>
+        <li>Number of acceptable clauses: <code><b>{{insightsStat.NumAcceptableClauses}}</b></code></li>
+        <li>Average confidence score of acceptable clauses: <code><b>{{insightsStat.AvgConfAcceptableClauses || 0 | number:'1.2-2' }}</b></code></li>
+        <li>Number of unacceptable clauses: <code><b>{{insightsStat.NumUnacceptableClauses}}</b></code></li>        
+        <li>Average confidence score of unacceptable clauses: <code><b>{{insightsStat.AvgConfUnacceptableClauses || 0 | number:'1.2-2'}}</b></code></li>
+      </ul>
+    </div>
+  </ng-template>

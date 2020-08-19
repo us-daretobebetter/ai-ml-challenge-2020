@@ -1,0 +1,43 @@
+Clause ID,Clause Text,Full Clause
+1000,,3.13.11
+1001,,FIPS 140-2
+1002,,Basic Information
+1003,"Just because the OS (Linux, or Windows) implements and supports FIPS compliance it does not guarantee that every application installed is also compliant.","Just because the OS (Linux, or Windows) implements and supports FIPS compliance it does not guarantee that every application installed is also compliant."
+1004,,WINDOWS
+1005,"Windows implements FIPS compliance by turning on the GPO ""System cryptography: Use FIPS compliant algorithms for encryption, hashing, and signing"".","Windows implements FIPS compliance by turning on the GPO ""System cryptography: Use FIPS compliant algorithms for encryption, hashing, and signing""."
+1006,"This only pertains to the operating system.  Any third party application can implement their own cryptography, although Microsoft recommends vendors point their applications to using the certified modules in the Windows OS.","This only pertains to the operating system.  Any third party application can implement their own cryptography, although Microsoft recommends vendors point their applications to using the certified modules in the Windows OS."
+1007,,LINUX
+1008,The FIPS 140-2 standard ensures that cryptographic tools implement their algorithms properly. See the full FIPS 140-2 standard at http://csrc.nist.gov/publications/fips/fips140-2/fips1402.pdf for further details on these levels and the other specifications of the FIPS standard.,The FIPS 140-2 standard ensures that cryptographic tools implement their algorithms properly. See the full FIPS 140-2 standard at http://csrc.nist.gov/publications/fips/fips140-2/fips1402.pdf for further details on these levels and the other specifications of the FIPS standard.
+1009,"To fulfil the strict FIPS 140-2 compliance, add the fips=1 kernel option to the kernel command line during system installation. With this option, all keys' generations are done with FIPS-approved algorithms and continuous monitoring tests in place. After the installation, the system is configured to boot into FIPS mode automatically.","To fulfil the strict FIPS 140-2 compliance, add the fips=1 kernel option to the kernel command line during system installation. With this option, all keys' generations are done with FIPS-approved algorithms and continuous monitoring tests in place. After the installation, the system is configured to boot into FIPS mode automatically."
+1010,,After the System Installation
+1011,"To turn your system, kernel and user space, into FIPS mode anytime after the system installation, follow these steps:","To turn your system, kernel and user space, into FIPS mode anytime after the system installation, follow these steps:"
+1012,Make sure prelinking is disabled.,Make sure prelinking is disabled.
+1013,"For proper operation of the in-module integrity verification, prelinking of libraries and binaries has to be disabled. Prelinking is done by the prelink package, which is not installed by default. To disable prelinking, set the PRELINKING=no option in the /etc/sysconfig/prelink configuration file. To disable existing prelinking on all system files, use the prelink -u -a command.","For proper operation of the in-module integrity verification, prelinking of libraries and binaries has to be disabled. Prelinking is done by the prelink package, which is not installed by default. To disable prelinking, set the PRELINKING=no option in the /etc/sysconfig/prelink configuration file. To disable existing prelinking on all system files, use the prelink -u -a command."
+1014,,Install the dracut-fips package:
+1015,,~]# yum install dracut-fips
+1016,"For the CPUs with the AES New Instructions (AES-NI) support, install the dracut-fips-aesni package as well:","For the CPUs with the AES New Instructions (AES-NI) support, install the dracut-fips-aesni package as well:"
+1017,,~]# yum install dracut-fips-aesni
+1018,Regenerate the initramfs file.,Regenerate the initramfs file.
+1019,"To enable the in-module integrity verification and to have all required modules present during the kernel boot, the initramfs file has to be regenerated:","To enable the in-module integrity verification and to have all required modules present during the kernel boot, the initramfs file has to be regenerated:"
+1020,,~]# dracut -v -f
+1021,,Warning
+1022,This operation will overwrite the existing initramfs file.,This operation will overwrite the existing initramfs file.
+1023,Modify boot loader configuration.,Modify boot loader configuration.
+1024,"To boot into FIPS mode, add the fips=1 option to the kernel command line of the boot loader. If your /boot or /boot/EFI/ partitions reside on separate partitions, add the boot=<partition> (where <partition> stands for /boot or /boot/EFI) parameter to the kernel command line as well.","To boot into FIPS mode, add the fips=1 option to the kernel command line of the boot loader. If your /boot or /boot/EFI/ partitions reside on separate partitions, add the boot=<partition> (where <partition> stands for /boot or /boot/EFI) parameter to the kernel command line as well."
+1025,,"To identify the boot partition, enter the following command:"
+1026,,~]$ df /boot
+1027,,Filesystem           1K-blocks      Used Available Use% Mounted on
+1028,,/dev/sda1               495844     53780    416464  12% /boot
+1029,"To ensure that the boot= configuration option works even if the device naming changes between boots, identify the universally unique identifier (UUID) of the partition by running the following command:","To ensure that the boot= configuration option works even if the device naming changes between boots, identify the universally unique identifier (UUID) of the partition by running the following command:"
+1030,,~]$ blkid /dev/sda1
+1031,,"/dev/sda1: UUID=""05c000f1-f899-467b-a4d9-d5ca4424c797"" TYPE=""ext4"""
+1032,,Append the UUID to the kernel command line: boot=UUID=05c000f1-f899-467b-a4d9-d5ca4424c797
+1033,,"Depending on your boot loader, make the following changes: grub2"
+1034,"Add the fips=1 and boot=<partition of /boot or /boot/EFI> options to the GRUB_CMDLINE_LINUX key in the /etc/default/grub file. To apply the changes to /etc/default/grub, rebuild the grub.cfg file as follows:","Add the fips=1 and boot=<partition of /boot or /boot/EFI> options to the GRUB_CMDLINE_LINUX key in the /etc/default/grub file. To apply the changes to /etc/default/grub, rebuild the grub.cfg file as follows:"
+1035,,"On BIOS-based machines, enter the following command as root:"
+1036,,~]# grub2-mkconfig -o /boot/grub2/grub.cfg
+1037,,"On UEFI-based machines, enter the following command as root:"
+1038,,~]# grub2-mkconfig -o /boot/efi/EFI/redhat/grub.cfg zipl (on the IBM z Systems architecture only)
+1039,Add the fips=1 and boot=<partition of /boot> options to the /etc/zipl.conf to the kernel command line and apply the changes by running the following command as root:,Add the fips=1 and boot=<partition of /boot> options to the /etc/zipl.conf to the kernel command line and apply the changes by running the following command as root:
+1040,,~]# zipl
+1041,,Reboot your system.

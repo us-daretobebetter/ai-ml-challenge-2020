@@ -1,0 +1,247 @@
+.row {
+  margin: 0;
+}
+
+.view-result-container {
+  font-family: "Lora", serif;
+  position: fixed;
+  height: 100%;
+  .tool-bar {
+    font-family: "Raleway", sans-serif;
+    padding: 0.5rem;
+    background: #2d2d2d;
+    box-shadow: 4px 3px 8px 0px #305d8473;
+    width: 100vw;
+    height: 3.5rem;
+
+    .back-btn-container {
+      margin: auto;
+      .back-btn {
+        display: inline-flex;
+        vertical-align: middle;
+        border-radius: 25px;
+        border-width: 0.5px;
+        color: white;
+        border-color: #717171;
+
+        -webkit-transition: 0.2s ease;
+        -moz-transition: 0.2s ease;
+        -ms-transition: 0.2s ease;
+        -o-transition: 0.2s ease;
+        transition: 0.2s ease;
+      }
+
+      .back-btn:hover {
+        border-color: white;
+        border-width: 1px;
+      }
+    }
+
+    .options-btn-container {
+      .options-btn-group {
+        display: inline-flex;
+        vertical-align: middle;
+
+        .material-icons {
+          font-size: 1.8rem;
+          padding: 0.5rem 1rem;
+          cursor: pointer;
+          color: #cccccc;
+
+          -webkit-transition: 0.2s ease;
+          -moz-transition: 0.2s ease;
+          -ms-transition: 0.2s ease;
+          -o-transition: 0.2s ease;
+          transition: 0.2s ease;
+        }
+
+        .train-btn .material-icons {
+          -webkit-transform: rotate(180deg);
+          -moz-transform: rotate(180deg);
+          -ms-transform: rotate(180deg);
+          -o-transform: rotate(180deg);
+          transform: rotate(180deg);
+        }
+
+        .material-icons:hover {
+          color: white;
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+  .body-container {
+    // margin: 2rem;
+    height: 100%;
+
+    .doc-list-container {
+      font-family: "Raleway", sans-serif;
+      padding: 2rem 1rem 0 2rem;
+      border-right: 2px solid lightgray;
+      background: #d3d3d342;
+
+      .list-header {
+        font-size: 1.5rem;
+        color: gray;
+        padding: 0 0 1rem 0;
+      }
+
+      .doc-list {
+        .doc-name {
+          cursor: pointer;
+          display: flex;
+          padding: 0.5rem;
+          word-break: break-word;
+
+          -webkit-transition: 0.2s ease;
+          -moz-transition: 0.2s ease;
+          -ms-transition: 0.2s ease;
+          -o-transition: 0.2s ease;
+          transition: 0.2s ease;
+
+          .doc-icon {
+            color: gray;
+            padding: 0 0.5rem 0 0;
+          }
+        }
+
+        .doc-name:hover {
+          transform: scale(1.05);
+          color: #3b6ec2;
+
+          .doc-icon {
+            color: #3b6ec2;
+          }
+        }
+
+        .doc-name.active {
+          font-weight: 700;
+          color: #3b6ec2;
+
+          .doc-icon {
+            color: #3b6ec2;
+          }
+        }
+      }
+    }
+    .clauses-container {
+      padding: 2rem;
+      overflow-y: scroll;
+      height: calc(100% - 3.5rem);
+      position: absolute;
+      right: 0;
+
+      // default (acceptable) clauses style
+      .clause {
+        .text {
+          line-height: 2.5rem;
+          font-size: 1.2rem;
+          padding: 0 1rem;
+          border-radius: 10px;
+          border-right: 2px solid;
+          border-left: 2px solid;
+          border-color: white;
+
+          -webkit-transition: 0.2s ease;
+          -moz-transition: 0.2s ease;
+          -ms-transition: 0.2s ease;
+          -o-transition: 0.2s ease;
+          transition: 0.2s ease;
+        }
+
+        .prediction {
+          font-family: "Raleway", sans-serif;
+          margin: auto;
+          text-align: left;
+          color: rgb(2, 92, 177);
+          cursor: pointer;
+
+          -webkit-transition: 0.2s linear;
+          -moz-transition: 0.2s linear;
+          -ms-transition: 0.2s linear;
+          -o-transition: 0.2s linear;
+          transition: 0.2s linear;
+
+          // .mat-icon.signal {
+          //   font-size: 1rem;
+          //   padding: 0 3rem 0 0;
+          // }
+          .acceptance {
+            vertical-align: middle;
+            display: inline-flex;
+
+            .mat-icon {
+              padding: 0 0 0 0.5rem;
+            }
+          }
+        }
+
+        // .tooltip-custom .tooltip-inner {
+        //   font-family: "Raleway", sans-serif;
+        //   background-color: #1b61a5;
+        //   font-size: 125%;
+        // }
+        // .tooltip-custom .arrow::before {
+        //   border-right-color: #1b61a5;
+        // }
+      }
+
+      .clause:hover,
+      .clause.active {
+        .text {
+          border-color: rgb(2, 92, 177);
+          background: #025cb12a;
+        }
+
+        .prediction {
+          font-weight: 800;
+        }
+      }
+
+      // unacceptable clauses styles
+      .clause.not-accept {
+        .prediction {
+          color: rgb(207, 37, 7);
+        }
+      }
+
+      .clause.not-accept:hover,
+      .clause.not-accept.active {
+        .text {
+          // bracket the clause
+          border-color: rgb(207, 37, 7);
+          background: rgba(207, 37, 7, 0.219);
+        }
+      }
+
+      // non- clauses styles
+      .clause.not-clause {
+        .prediction {
+          color: rgb(87, 87, 87);
+        }
+      }
+
+      .clause.not-clause:hover,
+      .clause.not-clause.active {
+        .text {
+          // bracket the clause
+          border-color: rgb(87, 87, 87);
+          background: rgba(87, 87, 87, 0.15);
+        }
+
+        .prediction {
+          cursor: default;
+        }
+      }
+    }
+  }
+}
+
+.modal-body.edit-prediction {
+  padding: 1rem 2rem;
+}
+
+button:focus {
+  outline: none;
+}

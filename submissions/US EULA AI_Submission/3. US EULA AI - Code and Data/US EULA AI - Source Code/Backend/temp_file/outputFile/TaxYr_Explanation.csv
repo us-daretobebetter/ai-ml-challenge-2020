@@ -1,0 +1,55 @@
+Clause ID,Clause Text,Full Clause
+1000,,TaxYr: 2018    From JSON 2020
+1001,"The month of ""TaxPeriod"": ""201812"" is 12. So the TaxYr is the year in the tax period. If not, the TaxYr is the year of tax period minus 1.","The month of ""TaxPeriod"": ""201812"" is 12. So the TaxYr is the year in the tax period. If not, the TaxYr is the year of tax period minus 1."
+1002,,{
+1003,,"""EIN"": ""340090940"","
+1004,"""TaxPeriod"": ""201812"",","""TaxPeriod"": ""201812"","
+1005,,"""DLN"": ""93493319204659"","
+1006,,"""FormType"": ""990"","
+1007,"""URL"": ""https://s3.amazonaws.com/irs-form-990/201903199349320465_public.xml"",","""URL"": ""https://s3.amazonaws.com/irs-form-990/201903199349320465_public.xml"","
+1008,"""OrganizationName"": ""INTERNATIONAL BROTHERHOOD TEAMSTERS 293 TCWH"",","""OrganizationName"": ""INTERNATIONAL BROTHERHOOD TEAMSTERS 293 TCWH"","
+1009,"""SubmittedOn"": ""2020-01-30"",","""SubmittedOn"": ""2020-01-30"","
+1010,"""ObjectId"": ""201903199349320465"",","""ObjectId"": ""201903199349320465"","
+1011,,"""LastUpdated"": ""2020-04-14T21:40:38.7930444Z"""
+1012,,}
+1013,,"TaxYr: 2017,  From JSON 2020"
+1014,"The month of ""TaxPeriod"": ""201811"" is 11. So the TaxYr is 2018 minus 1 which is 2017.","The month of ""TaxPeriod"": ""201811"" is 11. So the TaxYr is 2018 minus 1 which is 2017."
+1015,,{
+1016,,"""EIN"": ""113293390"","
+1017,"""TaxPeriod"": ""201811"",","""TaxPeriod"": ""201811"","
+1018,,"""DLN"": ""93492284006279"","
+1019,,"""FormType"": ""990EZ"","
+1020,"""URL"": ""https://s3.amazonaws.com/irs-form-990/201922849349200627_public.xml"",","""URL"": ""https://s3.amazonaws.com/irs-form-990/201922849349200627_public.xml"","
+1021,"""OrganizationName"": ""ROUHANA FAMILY FOUNDATION"",","""OrganizationName"": ""ROUHANA FAMILY FOUNDATION"","
+1022,"""SubmittedOn"": ""2020-02-06"",","""SubmittedOn"": ""2020-02-06"","
+1023,"""ObjectId"": ""201922849349200627"",","""ObjectId"": ""201922849349200627"","
+1024,,"""LastUpdated"": ""2020-04-07T15:44:01"""
+1025,,}
+1026,"TaxYr 2017, From Json 2019,","TaxYr 2017, From Json 2019,"
+1027,"Same reason as the example above, month of TaxPeriod is 11, so the TaxYr is 2018 minus 1 which is 2017","Same reason as the example above, month of TaxPeriod is 11, so the TaxYr is 2018 minus 1 which is 2017"
+1028,,{
+1029,,"""EIN"": ""381319617"","
+1030,"""TaxPeriod"": ""201811"",","""TaxPeriod"": ""201811"","
+1031,,"""DLN"": ""93493032011399"","
+1032,,"""FormType"": ""990"","
+1033,"""URL"": ""https://s3.amazonaws.com/irs-form-990/201940329349301139_public.xml"",","""URL"": ""https://s3.amazonaws.com/irs-form-990/201940329349301139_public.xml"","
+1034,"""OrganizationName"": ""EPICURIAN LODGE 674 IBPOE OF W THE ELKS"",","""OrganizationName"": ""EPICURIAN LODGE 674 IBPOE OF W THE ELKS"","
+1035,"""SubmittedOn"": ""2019-05-09"",","""SubmittedOn"": ""2019-05-09"","
+1036,"""ObjectId"": ""201940329349301139"",","""ObjectId"": ""201940329349301139"","
+1037,,"""LastUpdated"": ""2019-05-14T02:14:18"""
+1038,,}
+1039,"TaxYr 2017, From Json 2019,","TaxYr 2017, From Json 2019,"
+1040,"Same reason as the example above, month of TaxPeriod is 06, so the TaxYr is 2018 minus 1 which is 2017","Same reason as the example above, month of TaxPeriod is 06, so the TaxYr is 2018 minus 1 which is 2017"
+1041,,{
+1042,,"""EIN"": ""204223437"","
+1043,"""TaxPeriod"": ""201806"",","""TaxPeriod"": ""201806"","
+1044,,"""DLN"": ""93493101010189"","
+1045,,"""FormType"": ""990"","
+1046,"""URL"": ""https://s3.amazonaws.com/irs-form-990/201931019349301018_public.xml"",","""URL"": ""https://s3.amazonaws.com/irs-form-990/201931019349301018_public.xml"","
+1047,"""OrganizationName"": ""SCHOOLHOUSE SUPPLIES INC"",","""OrganizationName"": ""SCHOOLHOUSE SUPPLIES INC"","
+1048,"""SubmittedOn"": ""2019-05-08"",","""SubmittedOn"": ""2019-05-08"","
+1049,"""ObjectId"": ""201931019349301018"",","""ObjectId"": ""201931019349301018"","
+1050,,"""LastUpdated"": ""2019-05-14T02:14:18"""
+1051,,}
+1052,,Conclusion:
+1053,"In order to find the listed missing TaxYr of 2017 from the missingEin log file. You have to go through the JSON 2020, Json 2019 and Json 2018 to find it. TaxYr 2017 data might also appear in JSON 2021.","In order to find the listed missing TaxYr of 2017 from the missingEin log file. You have to go through the JSON 2020, Json 2019 and Json 2018 to find it. TaxYr 2017 data might also appear in JSON 2021."

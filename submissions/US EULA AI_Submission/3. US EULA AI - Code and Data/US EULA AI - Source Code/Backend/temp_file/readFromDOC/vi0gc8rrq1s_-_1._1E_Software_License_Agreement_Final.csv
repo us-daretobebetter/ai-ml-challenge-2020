@@ -1,0 +1,104 @@
+Clause ID,Clause Text
+1000,IMPORTANT NOTICE:
+1001,PLEASE READ CAREFULLY BEFORE EXECUTING THIS AGREEMENT
+1002,1E SOFTWARE LICENCE AGREEMENT
+1003,"THIS AGREEMENT is a legal agreement between you the ""Ordering Activity"" under GSA Schedule contracts (""Licensee"" or ""you"") and 1E Inc a corporation registered in Delaware and having its registered office at 5 Penn Plaza, 9th Floor, New York, NY10001, USA (""1E"" or ""us"");"
+1004,"PLEASE READ THIS AGREEMENT CAREFULLY AS IT CONTAINS IMPORTANT INFORMATION ABOUT YOUR RIGHTS AND OBLIGATIONS. UPON BOTH PARTIES EXECUTING THIS AGREEMENT IN WRITING YOU WILL HAVE PERMISSION FROM 1E TO DOWNLOAD, INSTALL AND USE ANY OF LICENSED SOFTWARE MATERIALS (AS DEFINED BELOW). THIS AGREEMENT GOVERNS YOUR USE OF THE LICENSED SOFTWARE MATERIALS SUPPLIED TO YOU BY US."
+1005,"By executing this agreement in writing you agree to be bound by the terms of this Agreement. If you do not agree to the terms of this Agreement, do not execute this agreement in writing,"
+1006,SIGNED BY: duly authorized to sign on 	behalf of <<Account_Name>>
+1007,Address: <<Account_BillingStreet>>
+1008,"<<Account_BillingState>>, <<Account_BillingPostalCode>>, <<Account_BillingCountry>>"
+1009,Printed Name:
+1010,Title:
+1011,Date:
+1012,SIGNED BY: duly authorized to sign on 	behalf of 1E
+1013,Printed Name:
+1014,Title:
+1015,Date:
+1016,This agreement may be executed in counterpart.
+1017,DESCRIPTION OF SOFTWARE & SERVICES
+1018,Title:						License Agreement
+1019,Commencement Date:				Date License Keys Issued
+1020,Term:						<<Opportunity_Contract_Length_in_Years>> MONTHS FROM DATE OF AGREEMENT
+1021,Software
+1022,Software Title/Type:				<<Opportunity_Drawloop_Addendum_Product_Types>>
+1023,Software Reference number (Licence Key): 		To be issued separately
+1024,Number of Operating System Instances Licensed:	<<Opportunity_Drawloop_Contract_Products_x_Quantity>>
+1025,Maintenance
+1026,Initial Maintenance Term:		<<Opportunity_Contract_Length_in_Years>> MONTHS FROM DATE OF AGREEMENT
+1027,Maintenance Fee per year:			Included in the licence price in accordance with the GSA Schedule Pricelist
+1028,Maintenance Service: 				Premier Support
+1029,Training
+1030,Number of Delegates:				<<Opportunity_Days_of_Training>>
+1031,Commencement date:				TBC
+1032,Description of Training to be Provided:		2 Day Course in Products Purchased
+1033,Consultancy Services
+1034,No days:					<<Total_Services_Days>>
+1035,Commencement date:				TBC
+1036,Services:		For details of services to be performed see Scope of Work Agreement
+1037,"GRANT OF LICENCE, ACCEPTANCE"
+1038,"1E grants you a non-exclusive, non-transferable, revocable, world-wide subscription licence to use the Software  (the ""Licence""), the instruction manuals, user guides and other information of 1E (the ""Software Documentation""), any release of a new version of the Software that improves its functionality and which is deemed by 1E to be benefit to you, and any update of the Software including any supplementary software code, ""patches"" or corrections of errors as may be provided by 1E from time to time (the ""Updates"") together, the ""Licensed Software Materials"" in accordance with and subject to the terms and conditions of this Agreement."
+1039,The Software shall be deemed to be accepted once both parties execute this Agreement in writing. You may install and use the Software for your business purposes for the number of licensed devices agreed between you and 1E. You shall not increase the number of licensed devices without 1E's prior written consent.  You shall immediately notify 1E should the number of operating system instances upon which the software is installed exceed the number operating system instances agreed herein.
+1040,You may make a reasonable number of back-up copies of the Licensed Software Materials.  Any such copy shall in all respects be subject to the terms and conditions of this Agreement and shall be deemed to form part of the Software. property and confidentiality in the licensed software materials
+1041,"All inventions, patents, designs, copyright, database right and trade marks (the ""Intellectual Property"") in the Licensed Software Materials are the exclusive property of or are licensed to 1E."
+1042,"You must not: copy the whole or any part of the Licensed Software Materials; or modify, merge or combine the whole or any part of the Licensed Software Materials with any other software or documentation; or assign, license, transfer, sell or otherwise the Licensed Software Materials nor use on behalf of or make available the same to any third party; or reverse engineer or decompile the whole or any part of the Licensed Software Materials."
+1043,"The Licensed Software Materials, and all technical information relating to the same, without limitation, shall be deemed to be Confidential Information of 1E.You shall do all that is necessary to protect the Confidential Information (as defined in Clause 6.1 below) and Intellectual Property Rights of 1E.  1E recognizes that Federal agencies are subject to the Freedom of Information Act, 5 U.S.C. 552, which requires that certain information be released, despite being characterized as ""confidential"" by the vendor."
+1044,"Subject to applicable Government security requirements, 1E and its nominated representatives shall have the right to audit all the Software provided or installed under this Agreement to ensure that the use of the Software by you is in compliance with the terms of this Agreement.  Such audit shall take place no more than once every twelve months and on 28 days notice to you. You shall provide all reasonable assistance to 1E as 1E may require in the performance of such audit."
+1045,Warranty
+1046,"1E warrants that: it has the right, power and authority to license the Licensed Software Materials upon the terms and conditions of this Agreement; the Software will for a period of ninety (90) days from the date it is delivered to you conform to the Software Specifications."
+1047,You must give notice to 1E within 30 days upon becoming aware of a breach of warranty. 1E shall have no liability to remedy a breach of warranty that occurs as a result of an act or omission of yours.
+1048,"Without prejudice to the foregoing, 1E does not warrant that the use of the Software will meet your requirements or that the operation of the Software (including where in machine-readable form the Software Documentation) will be uninterrupted or error free.1E does not warrant that the Software will be compatible with your software, hardware or other equipment and shall not be liable for any damage caused to your software, hardware or other equipment as a result of using the Software."
+1049,"Subject to the foregoing, all conditions, warranties, terms, representations (unless fraudulent) and undertakings express or implied, statutory or otherwise in respect of the Licensed Software Materials are hereby excluded to the fullest extent permissible by law."
+1050,MAINTENANCE services
+1051,"With effect from the Commencement Date and subject to the parties agreement, 1E shall provide the Maintenance Services as agreed between 1E and the user subject to the terms and conditions of this Agreement."
+1052,"1E shall not be liable to provide Maintenance Services in respect of Software that is not properly licensed pursuant to Clause 1 of this Agreement or if you operate the Software on a Microsoft platform whereby the applicable version of ‘Microsoft Windows' or ‘Microsoft SMS'  or ‘Microsoft ‘MOM'' or ‘Microsoft System Center' or any other relevant Microsoft platform is not, or ceases at any time to be, supported by Microsoft Corporation or if you are not in conformity with the minimum technical requirements and prerequisites set out in the technical applications published in respect of the Software (the ""Software Specifications"") or where you do not use the Software in accordance with all the instructions and guidance materials provided by 1E."
+1053,"1E will provide Maintenance Services for the current version of Software, and the one preceding version of Software for up to twelve (12) months from the date of release of the current version of the Software."
+1054,INTELLECTUAL PROPERTY
+1055,Nothing in this Agreement will operate to transfer to your ownership of or any other interest in any Intellectual Property all of which you acknowledge are owned exclusively by 1E.
+1056,"You agree that should any right (including any moral right), title or interest in any of the Intellectual Property or any goodwill arising out of the use thereof become vested in it or any of its employees, sub-contractors, consultants or agents (by operation of law or otherwise) then, to the extent that such rights have vested in you, it shall hold the same on trust for 1E and in any event you shall upon 1E's request and without charge promptly and unconditionally take all such action and execute all such documents and/or procure the taking of such action and the execution of such documents by any such employees, sub-contractors, consultants or agents as shall be necessary to assign such right, title or interest to 1E."
+1057,"1E shall indemnify and hold you harmless from and against and defend any claim by a third party that the Software infringes that third party's Intellectual Property Rights.  You shall immediately notify 1E if you become aware of such a claim and provide such assistance to 1E as 1E may require in the defence or settlement of such claim at 1E's expense.  Nothing contained herein shall be construed in derogation of the U.S. Department of Justice's right to defend any claim or action brought against the U.S., pursuant to its jurisdictional statute 28 U.S.C. §516"
+1058,"In the event that any claim is made or threatened, 1E may at its option and expense: procure for you the right to continue using the Software or infringing part thereof; or modify or amend the Software or infringing part thereof so that it becomes non-infringing; or replace the Software or infringing thereof by other software of similar capability; or"
+1059,Reserved.
+1060,"The indemnity given under Clause 4.3 will not apply to the extent that any infringement has arisen directly from: any modifications to the Software which are made by you without 1E's written consent or written authorisation; or the use of the Software in combination with any other materials, software, equipment or systems not supplied or approved by 1E and in a manner not contemplated by this Agreement."
+1061,"You shall be under an obligation to mitigate your losses in respect of liabilities being indemnified and shall, if requested by 1E, provide evidence to 1E of all steps that you have taken to do so."
+1062,Limitation of Liability
+1063,"Without prejudice to Clause 5.3, and except as otherwise provided in this Agreement, the total liability of 1E in contract, tort (including negligence or breach of statutory duty) or otherwise arising by reason of or in connection with this Agreement shall be limited in aggregate to the Contract Price ."
+1064,"In no event shall 1E be liable to you for: loss of revenue; loss of anticipated savings; loss of profits; loss of data; damage to goodwill; loss of reputation; or for any type of indirect, economic or consequential loss or damage whatsoever or howsoever caused."
+1065,Neither party excludes or limits liability to the other for death or personal injury caused by its negligence or for fraud.
+1066,Confidentiality
+1067,"Without limitation to obligations of confidentiality in respect of Licensed Software Materials, neither Party shall use, copy, adapt, alter, disclose or part with possession of any information or data of the other Party which is disclosed or otherwise comes into its possession directly or indirectly as a result of this Agreement and which is of a confidential nature (""Confidential Information"") without the prior written consent of the disclosing Party except as strictly necessary to perform its obligations or exercise its rights under this Agreement.  1E recognizes that Federal agencies are subject to the Freedom of Information Act, 5 U.S.C. 552, which requires that certain information be released, despite being characterized as ""confidential"" by the vendor."
+1068,"The receiving Party undertakes not to disclose any Confidential Information save where necessary to employees, professional advisors and approved sub-contractors of the receiving Party."
+1069,The foregoing obligations shall not apply to Confidential Information that: was known to the receiving Party prior to receipt from the disclosing Party; or is received from a third party without breach of any other confidentiality arrangements; or is or becomes public knowledge other than by breach of this Clause or is independently developed by or for the receiving Party; or is required to be disclosed by any applicable law.
+1070,The obligations in this Clause shall continue in force notwithstanding termination of this Agreement for any reason.
+1071,TERM & Termination
+1072,With the exception of those clauses intended to survive termination this agreement will remain in force for a period of 12 months from the date of execution.
+1073,"Recourse against the United States for any alleged breach of this agreement must be made under the terms of the Federal Tort Claims Act or as a dispute under the contract disputes clause (Contract Disputes Act) as applicable.  The Contractor shall proceed diligently with performance of this contract, pending final resolution of any request for relief, claim, appeal, or action arising under the contract, and comply with any decision of the Contracting Officer."
+1074,.
+1075,Reserved
+1076,Reserved;
+1077,Any termination of this Agreement (however occasioned) shall not operate so as to affect any accrued rights or liabilities of either Party.
+1078,Within fourteen (14) days of the termination of this Agreement (howsoever and by whomsoever occasioned) you shall return or destroy (as 1E shall instruct) all copies of the Licensed Software Materials in your possession.
+1079,General
+1080,Neither Party shall be liable to the other Party for any delay or non-performance of its obligations under this Agreement to the extent that its performance is interrupted or prevented for reasons beyond its reasonable control.
+1081,Any failure or delay on the part of either Party to exercise any power or right under this Agreement shall not operate as a waiver of it.
+1082,"Any notices that are required or made under this Agreement shall be delivered by the notifying party to the recipient party by means of post or facsimile transmission. All notices to 1E shall be sent to 1E Limited, CP House, 97-107 Uxbridge Road, London, W5 5TL United Kingdom."
+1083,"If any term or provision of this Agreement or its application to any Party or circumstances shall, to any extent, be invalid or unenforceable, the remainder of this Agreement or the application of the term or provision to any other Party or circumstances, other than those as to which it is already invalid or unenforceable, shall not be affected."
+1084,"Save as stated herein, neither Party shall be entitled to assign, sub-contract or otherwise transfer its rights or obligations under this Agreement whether in whole or in part without the other Party's prior written consent (not to be unreasonably withheld subject to the procedures for securing such approval set forth in FAR 42.1204), 1E shall have the right to sub-contract its obligations under this Agreement provided that 1E shall remain primarily responsible to you for all the acts and omissions of the sub contractors as fully as if they were the acts and omissions of 1E."
+1085,A person who is not a Party to this Agreement shall have no rights under this Agreement.
+1086,No amendment to this Agreement whether oral or written shall be binding on either Party unless in writing and signed on behalf of the Parties.
+1087,"Each Party to this Agreement is an independent contractor.  No provision of this Agreement or any act of the parties pursuant to this Agreement will be construed to express or imply a joint venture, partnership, or relationship other than vendor and purchaser of services."
+1088,Reserved
+1089,"This Agreement together with the underlying GSA Schedule Contract, Schedule Pricelist, Purchase Order(s), constitutes the entire agreement between the Parties with respect to the subject matter hereof and supersedes and invalidates all prior oral or written communications, understandings, representations or warranties relating to the subject matter hereof. Each Party warrants to the other that it has not relied on any such communications, understandings, representations or warranties in entering into this Agreement. In the event of a conflict between this Agreement and a Purchase Order, the Purchase Order shall prevail"
+1090,"Notwithstanding anything contained herein to the contrary, the provisions of clauses 2,4, 5, 6 and any other clauses which are intended to survive termination shall survive termination and continue in full force and effect thereafter."
+1091,This Agreement shall be governed and construed in accordance with the Federal laws of the United States.
+1092,COMPLIANCE WITH ANTI-CORRUPTION REQUIREMENTS
+1093,"The Parties shall: comply with all applicable laws, regulations, codes and sanctions relating to anti-bribery and anti-corruption including the Foreign Corrupt Practises Act have and shall maintain in place throughout the term of this Agreement its own policies and procedures, including adequate procedures to ensure compliance with the Relevant Requirements, the Relevant Policies, and will enforce them where appropriate; ensure that all persons associated with the Company or other persons who are performing Services or providing Products in connection with this Agreement comply with this clause; and upon receiving a written request from 1E  to certify in writing signed by an officer of the Company, compliance with this clause by the Company and all persons associated with it and all other persons for whom the Company is responsible.  The Company shall provide such supporting evidence of compliance as 1E may reasonably request."
+1094,Reserved
+1095,Reserved
+1096,PUBLICITY
+1097,Reserved
+1098,"1E shall be permitted to use the Licensees/ end users name and corporate logo in its marketing and promotional materials, including but not limited to 1E's website to the extent permitted by the General Services Acquisition Regulation (GSAR) 552.203-71.."
+1099,Reserved.
+1100,"Upon execution of this agreement 1E may at their sole option issue a press release confirming the relationship between the parties, the products purchased and/or the nature of the project being undertaken to the extent permitted by the General Services Acquisition Regulation (GSAR) 552.203-71..."
+1101,Taxes
+1102,"Notwithstanding the terms of the Federal, State, and Local Taxes Clause, the contract price excludes all State and Local taxes levied on or measured by the contract or sales price of the services or completed supplies furnished under this contract. 1E shall state separately on its invoices taxes excluded from the fees, and the Customer agrees either to pay the amount of the taxes (based on the current value of the equipment) to the contractor or provide evidence necessary to sustain an exemption, in accordance with FAR 52.229-1 and FAR 52.229-3."
